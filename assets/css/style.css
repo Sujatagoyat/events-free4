@@ -26,7 +26,7 @@
 }
 
 .bg-clr {
-    background-color: var(--fc-black);
+    background-color: #120D0A;
 }
 
 .bg-image {
@@ -161,7 +161,7 @@
 .text-2 {
     font-family: 'Poppins',
         sans-serif;
-    font-size: var(--fs-md);
+    font-size: var(--fs-lg);
     font-weight: 600;
     line-height: 36px;
     letter-spacing: 0em;
@@ -221,7 +221,13 @@
     /* width: 424px; */
     border-radius: 30px;
     background: var(--fc-white);
+    /* box-shadow: 0px 8px 35px 0px rgba(0, 0, 0, 0.10); */
+    border: 2px solid #cccccc;
+}
+
+.card-1:hover {
     box-shadow: 0px 8px 35px 0px rgba(0, 0, 0, 0.10);
+    border: 2px solid transparent;
 }
 
 .cursor-pointer {
@@ -371,13 +377,62 @@
         right: 0;
     }
 
+    .position {
+        position: fixed !important;
+        z-index: 2 !important;
+    }
 
+
+}
+
+@media (min-width:576px) and (max-width:992px) {
+    label[for="menu-icon"] {
+        width: 30px;
+        height: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: relative;
+        z-index: 3;
+        cursor: pointer;
+        position: fixed;
+        right: 100px;
+    }
 }
 
 @media (min-width:320px)and (max-width:768px) {
 
     .fs-20 {
-        font-size: 18px;
+        font-size: var(--fs-md);
+    }
+}
+
+@media (max-width:336px) {
+    .underline-1 {
+        position: relative;
+    }
+
+    .underline-1::after {
+        content: '';
+        width: 0%;
+        height: 8px;
+        position: absolute;
+        top: 1%;
+        left: 0;
+        background-color: var(--fc-purple);
+        z-index: -1;
+    }
+
+
+    .underline-1::before {
+        content: '';
+        width: 0;
+        height: 8px;
+        position: absolute;
+        top: 1%;
+        left: 0;
+        background-color: var(--fc-skyblue);
+        z-index: -1;
     }
 
 
